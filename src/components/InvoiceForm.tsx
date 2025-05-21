@@ -7,8 +7,10 @@ import TotalsSection from './sections/TotalsSection';
 import { Activity, FormData, FormErrors } from '../types';
 import { validateForm } from '../utils/validation';
 
-// Get webhook URL from environment variables
-const N8N_WEBHOOK_URL = import.meta.env.VITE_N8N_WEBHOOK_URL || 'http://localhost:5678/webhook-test/generate-invoice';
+// Get webhook URL based on environment
+const N8N_WEBHOOK_URL = import.meta.env.PROD
+  ? 'https://your-production-n8n-instance.com/webhook/generate-invoice'
+  : 'http://localhost:5678/webhook/generate-invoice';
 
 // Log the webhook URL during development
 if (import.meta.env.DEV) {

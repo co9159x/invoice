@@ -2,6 +2,9 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  VITE_N8N_WEBHOOK_URL = "http://localhost:5678/webhook/generate-invoice"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
