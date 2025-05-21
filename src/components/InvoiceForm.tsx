@@ -9,7 +9,7 @@ import { validateForm } from '../utils/validation';
 
 // Get webhook URL based on environment
 const N8N_WEBHOOK_URL = import.meta.env.PROD
-  ? 'http://localhost:5678/webhook/generate-invoice'  // Using local n8n for now
+  ? 'https://n8n-latest-detj.onrender.com/webhook/generate-invoice'
   : 'http://localhost:5678/webhook/generate-invoice';
 
 // Log the webhook URL during development

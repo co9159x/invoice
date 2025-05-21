@@ -3,7 +3,7 @@
   publish = "dist"
 
 [build.environment]
-  VITE_N8N_WEBHOOK_URL = "http://localhost:5678/webhook/generate-invoice"
+  VITE_N8N_WEBHOOK_URL = "https://n8n-latest-detj.onrender.com/webhook/generate-invoice"
 
 [[redirects]]
   from = "/*"
